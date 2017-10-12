@@ -49,6 +49,14 @@ export class GMapComponent implements OnInit {
               this.lat = (place.geometry.location.lat());
               this.lng = (place.geometry.location.lng());
 
+              this.markers.push({
+                lat: this.lat,
+                lng: this.lng,
+                label: 'new',
+                draggable: true,
+                infoWindowContent: "Your new item",
+              });
+
 
                 });
             });
